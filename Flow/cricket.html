@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <title>Cricket elimination</title>
+  <style>
+  table tr:nth-child(even) {
+  background-color: #eee;
+}
+  table tr:nth-child(odd) {
+  background-color: #fff;
+}
+  th {
+  color: white;
+  background-color: black;
+}
+  tr{
+    color:black;
+    height: 3vh;
+  }
+button{
+ border-radius: 20px;
+ border-color:#00FFFF;
+ background-color: #CCFFFF;
+ font-size:2vh;
+ }
+label {
+ width: 90%;
+ padding: 6px 0 6px 0;
+ }
+ input{
+   width:100%;
+ }
+ body{
+   text-align:center;
+ }
+ #canvas{
+   margin-left: 35%;
+   width:30%;
+   height:30%;
+ }
+ span {
+   color:#FF7777;
+ }
+  </style>
+</head>
+
+<body>
+  <h1>Base-ball elimination</h1>
+  Simple calculator which solves the Baseball elimination problem online.
+  It basically finds <span> Which teams have a chance of finishing the season with the most wins? </span> <br>
+  This calculator uses DINIC Max Flow algorithm for the same. Run time of Dinic's: <span> O(EV^2) </span>, Runtime of this calculator: <span> O(TxV^3) = O(T^7)</span>
+   <br>
+   <br>
+   <br>
+
+  <input id="addteam" style="width:20%"></input>
+  <button id="add" for="addteam">Add Team</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <table style="width:80%;margin-left:10%;" id="table">
+  <tr>
+    <th rowspan="2" width="30%">Team</th><th rowspan="2" width="10%">Wins</th><th rowspan="2" width="10%">Losses</th><th id="remaining" colspan="1" width="50%">Remaining</th>
+  </tr>
+  <tr id="teams"></tr>
+</table>
+  <br>
+  <br>
+  <button id="run">RUN</button>
+  <div id="canvas"><div>
+</body>
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script src="js\cricket.js"></script>
+<script src="js\dinic.js"></script>
+<script src="js\misc.js"></script>
+<script src="js\draw.js"></script>
+</html>

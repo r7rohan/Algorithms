@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+  <title>Max-Flow</title>
+  <style>
+  #canvas{
+    margin-left: 25%;
+    width:50vw;
+    height:50vh;
+    border:solid 4px black;
+    }
+  body{
+    text-align:center;
+  }
+  button{
+   border-radius: 20px;
+   border-color:#00FFFF;
+   background-color: #CCFFFF;
+   font-size:2vh;
+   }
+
+  label {
+   width: 90%;
+   padding: 6px 0 6px 0;
+   background-color:#FFCCCC;}
+   span {
+     color:#FF7777;
+   }
+   input{
+     height:3vh;
+     width:4vw;
+   }
+   .controls{
+     text-align: center;
+     float:left;
+     display:inline-block;
+   }
+  </style>
+</head>
+<body>
+  <h1>DINIC's MAXFLOW</h1>
+  Tool for Finding max-flow and min-cut of a network, and its visualization<br>
+  Uses Dinic Max-flow algorithm for the same. Run time of Dinic's: <span> O(EV^2) </span>
+  <br>
+  <br>
+  <div class="controls">
+  <div>
+    <input id="name" value="2"></input> <br><br>
+    <button id="vertice">Add vertice</button>
+  </div>
+  <br>
+  <br>
+  <div>
+    <label for="u">From </label><input id="u"></input>
+    <label for="v">To </label><input id="v"></input>
+    <label for="c">Capacity</label><input id="c" value="0"></input> <br><br>
+    <button id="edge">Add Edge</button>
+  </div>
+  <br>
+  <br>
+  <button id="maxflow">Maxflow</button><button id="undo">Undo Flow</button>
+</div>
+
+
+  <div id="canvas"></div>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <a href = "cricket.html" style="text-decoration: none;">Cricket game application of Max flow ></a>
+
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="js\dinic.js"></script>
+  <script src="js\draw.js"></script>
+  <script src="js\misc.js"></script>
+  <script src="js\index.js"></script>
+</body>
+</html>
